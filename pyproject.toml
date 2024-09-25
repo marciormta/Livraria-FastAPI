@@ -8,7 +8,30 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.115.0"}
+pytest = "^8.3.3"
+pytest-cov = "^5.0.0"
+taskipy = "^1.13.0"
+ruff = "^0.6.7"
+ignr = "^2.2"
 
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+# I (Isort): Checagem de ordenação de imports em ordem alfabética
+# F (Pyflakes): Procura por alguns erros em relação a boas práticas de código
+# E (Erros pycodestyle): Erros de estilo de código
+# W (Avisos pycodestyle): Avisos de coisas não recomendadas no estilo de código
+# PL (Pylint): Como o F, também procura por erros em relação a boas práticas de código
+# PT (flake8-pytest): Checagem de boas práticas do Pytest
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.pytest.ini_options] # Para reconhecer que o caminho base para execuçao dos testes.
+pythonpath = "."
+addopts = '-p no:warnings'
 
 [build-system]
 requires = ["poetry-core"]

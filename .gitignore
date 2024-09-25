@@ -1,16 +1,38 @@
-# Ignore Python cache files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Ignore virtual environment directories
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
 venv/
 .venv/
+ENV/
+env/
+.env/
 
-# Ignore Poetry lock files
+# Poetry files
 poetry.lock
 
-# Ignore logs
-*.log
-
-# Ignore environment variables file
-.env
+# Pytest cache
+.pytest_cache/
